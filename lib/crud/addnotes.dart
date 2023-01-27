@@ -109,22 +109,22 @@ class _AddNotesState extends State<AddNotes> {
                       labelText: "Note",
                       prefixIcon: Icon(Icons.note)),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     showBottomSheet(context);
                   },
-                  textColor: Colors.white,
                   child: Text("Add Image For Note"),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () async {
                     await addNotes(context);
                   },
-                  textColor: Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+                  style: ElevatedButton.styleFrom(
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 100, vertical: 10)),
                   child: Text(
                     "Add Note",
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 )
               ]))

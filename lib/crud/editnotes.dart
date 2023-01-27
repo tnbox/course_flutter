@@ -118,22 +118,27 @@ class _EditNotesState extends State<EditNotes> {
                       labelText: "Note",
                       prefixIcon: Icon(Icons.note)),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     showBottomSheet(context);
                   },
-                  textColor: Colors.white,
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                  ),
                   child: Text("Edit Image For Note"),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () async {
                     await editNotes(context);
                   },
-                  textColor: Colors.white,
-                  padding: EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+                  style: ElevatedButton.styleFrom(
+                    foregroundColor: Colors.white,
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 100, vertical: 10),
+                  ),
                   child: Text(
                     "Edit Note",
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.titleLarge,
                   ),
                 )
               ]))

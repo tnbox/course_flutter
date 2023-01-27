@@ -138,8 +138,7 @@ class _SignUpState extends State<SignUp> {
                           ],
                         )),
                     Container(
-                        child: RaisedButton(
-                      textColor: Colors.white,
+                        child: ElevatedButton(
                       onPressed: () async {
                         UserCredential response = await signUp();
                         print("===================");
@@ -156,7 +155,7 @@ class _SignUpState extends State<SignUp> {
                       },
                       child: Text(
                         "Sign Up",
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context).textTheme.titleLarge,
                       ),
                     ))
                   ],
